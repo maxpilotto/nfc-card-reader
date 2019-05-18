@@ -1,7 +1,5 @@
 # nfc-card-reader
-
-A fully customizable Android view that can display credit card's informations
-
+Wrapper for pro100svitlo's nfc card reading library 
 
 # Getting started
 * Download the lastest release, you can find it [here](https://github.com/maxpilotto/nfc-card-reader/releases) 
