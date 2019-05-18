@@ -80,4 +80,21 @@ public abstract class NfcReaderActivity extends AppCompatActivity {
 }
 ```
 
+Remember to add the NFC permission
+```xml
+<uses-permission android:name="android.permission.NFC" />
+```
+
+And add this intent filter to the activity you want to launch when a card is discovered, this is needed if you want your app to scan cards even when it's closed.  
+If you don't want the activity to automatically open do not add the filter
+```xml
+<intent-filter>
+    <action android:name="android.nfc.action.TECH_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+</intent-filter>
+
+<meta-data
+    android:name="android.nfc.action.TECH_DISCOVERED"
+    android:resource="@xml/nfc_tech" />
+```
 # Check out the [Demo](https://github.com/maxpilotto/nfc-card-reader/releases)
