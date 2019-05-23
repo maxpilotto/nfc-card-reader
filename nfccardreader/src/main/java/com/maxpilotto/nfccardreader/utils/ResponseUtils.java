@@ -2,9 +2,6 @@ package com.maxpilotto.nfccardreader.utils;
 
 import com.maxpilotto.nfccardreader.enums.SwEnum;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Arrays;
 
 import fr.devnied.bitlib.BytesUtils;
@@ -15,11 +12,6 @@ import fr.devnied.bitlib.BytesUtils;
  * 
  */
 public final class ResponseUtils {
-
-	/**
-	 * Class logger
-	 */
-	private static final Logger LOGGER = LoggerFactory.getLogger(ResponseUtils.class);
 
 	/**
 	 * Method used to check if the last command return SW1SW2 == 9000
@@ -43,13 +35,7 @@ public final class ResponseUtils {
 	 */
 	public static boolean isEquals(final byte[] pByte, final SwEnum pEnum) {
 		SwEnum val = SwEnum.getSW(pByte);
-		if (LOGGER.isDebugEnabled() && pByte != null) {
-			byte[] ooo = Arrays.copyOfRange(pByte, pByte.length - 2, pByte.length);
-			String q = BytesUtils.bytesToStringNoSpace(ooo);
-					LOGGER.debug("Response Status <"
-							+ q + "> : "
-							+ (val != null ? val.getDetail() : "Unknow"));
-		}
+
 		return val != null && val == pEnum;
 	}
 

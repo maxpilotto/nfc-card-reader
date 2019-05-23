@@ -2,18 +2,10 @@ package com.maxpilotto.nfccardreader.utils;
 
 import com.maxpilotto.nfccardreader.model.enums.IKeyEnum;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Utils class which provided methods to manipulate Enum
  */
 public final class EnumUtils {
-
-	/**
-	 * Class logger
-	 */
-	private static final Logger LOGGER = LoggerFactory.getLogger(EnumUtils.class);
 
 	/**
 	 * Get the value of and enum from his key
@@ -31,7 +23,6 @@ public final class EnumUtils {
 				return (T) val;
 			}
 		}
-		LOGGER.error("Unknow value:" + pKey + " for Enum:" + pClass.getName());
 		return null;
 	}
 

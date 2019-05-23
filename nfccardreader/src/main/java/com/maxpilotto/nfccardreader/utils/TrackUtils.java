@@ -4,9 +4,6 @@ import com.maxpilotto.nfccardreader.iso7816emv.EmvTags;
 import com.maxpilotto.nfccardreader.model.EmvCard;
 import com.maxpilotto.nfccardreader.model.Service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,12 +13,6 @@ import fr.devnied.bitlib.BytesUtils;
  * Extract track data
  */
 public final class TrackUtils {
-
-	/**
-	 * Class logger
-	 */
-	private static final Logger LOGGER = LoggerFactory.getLogger(TrackUtils.class);
-
 	/**
 	 * Track 2 pattern
 	 */

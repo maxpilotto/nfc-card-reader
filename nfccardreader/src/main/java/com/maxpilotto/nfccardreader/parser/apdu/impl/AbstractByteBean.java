@@ -7,9 +7,6 @@ import com.maxpilotto.nfccardreader.parser.apdu.IFile;
 import com.maxpilotto.nfccardreader.parser.apdu.annotation.AnnotationData;
 import com.maxpilotto.nfccardreader.parser.apdu.annotation.AnnotationUtils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,11 +25,6 @@ public abstract class AbstractByteBean<T> extends AbstractData implements IFile 
 	 * Generated serial UID
 	 */
 	private static final long serialVersionUID = -2016039522844322383L;
-
-	/**
-	 * Logger of the class
-	 */
-	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractByteBean.class.getName());
 
 	/**
 	 * Method to get the annotation set from the current class
@@ -98,10 +90,8 @@ public abstract class AbstractByteBean<T> extends AbstractData implements IFile 
 		if (field != null) {
 			try {
 				field.set(pData, pValue);
-			} catch (IllegalArgumentException e) {
-				LOGGER.error("Parameters of fied.set are not valid", e);
-			} catch (IllegalAccessException e) {
-				LOGGER.error("Impossible to set the Field :" + field.getName(), e);
+			} catch (Exception e){
+				e.printStackTrace();
 			}
 		}
 	}
