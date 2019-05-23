@@ -1,2 +1,1 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.maxpilotto.nfccardreader" />
+<manifest package="com.maxpilotto.nfccardreader" />

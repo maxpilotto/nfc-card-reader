@@ -18,8 +18,6 @@ import java.util.Collection;
  */
 
 public final class AtrUtils {
-
-    private static String TAG = "creditCardNfcReader";
     /**
      * MultiMap containing ATR
      */
@@ -46,9 +44,6 @@ public final class AtrUtils {
                     MAP.put(currentATR, line.replace("\t", "").trim());
                 } else if (line.startsWith("3")) { // ATR hex
                     currentATR = StringUtils.deleteWhitespace(line.toUpperCase());
-                } else {
-                    Log.d(TAG, "Encountered unexpected line in atr list: currentATR=" + currentATR + " Line(" + lineNumber
-                            + ") = " + line);
                 }
             }
 

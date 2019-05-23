@@ -10,7 +10,7 @@ import com.maxpilotto.nfccardreader.reader.NfcCardReader;
 
 /**
  * Create by Max Pilotto on 18/05/2019
- *
+ * <p>
  * github.com/maxpilotto
  */
 public abstract class NfcReaderActivity extends AppCompatActivity implements NfcCardListener {

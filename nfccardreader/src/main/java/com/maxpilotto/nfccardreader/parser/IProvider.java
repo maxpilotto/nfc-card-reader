@@ -7,13 +7,12 @@ import com.maxpilotto.nfccardreader.exception.CommunicationException;
  */
 public interface IProvider {
 
-	/**
-	 * Method used to transmit and receive card response
-	 * 
-	 * @param pCommand
-	 *            command to send to card
-	 * @return byte array returned by card
-	 */
-	byte[] transceive(byte[] pCommand) throws CommunicationException;
+    /**
+     * Method used to transmit and receive card response
+     *
+     * @param pCommand command to send to card
+     * @return byte array returned by card
+     */
+    byte[] transceive(byte[] pCommand) throws CommunicationException;
 
 }

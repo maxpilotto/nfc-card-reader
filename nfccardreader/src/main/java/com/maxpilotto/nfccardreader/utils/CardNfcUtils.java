@@ -2,7 +2,6 @@ package com.maxpilotto.nfccardreader.utils;
 
 import android.app.Activity;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NfcAdapter;
@@ -17,11 +16,11 @@ public class CardNfcUtils {
     private final NfcAdapter mNfcAdapter;
     private final PendingIntent mPendingIntent;
     private final Activity mActivity;
-    private static final IntentFilter[] INTENT_FILTER = new IntentFilter[] {
+    private static final IntentFilter[] INTENT_FILTER = new IntentFilter[]{
             new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED),
             new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED)};
-    private static final String[][] TECH_LIST = new String[][] { {
-            NfcA.class.getName(), IsoDep.class.getName() } };
+    private static final String[][] TECH_LIST = new String[][]{{
+            NfcA.class.getName(), IsoDep.class.getName()}};
 
     public CardNfcUtils(final Activity pActivity) {
         mActivity = pActivity;

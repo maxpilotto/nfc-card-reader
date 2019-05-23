@@ -1,4 +1,4 @@
-<resources >
+<resources>
     <tech-list>
         <tech>android.nfc.tech.IsoDep</tech>
     </tech-list>

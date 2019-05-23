@@ -6,24 +6,24 @@ import com.maxpilotto.nfccardreader.enums.TagValueTypeEnum;
 
 public interface ITag {
 
-	enum Class {
-		UNIVERSAL, APPLICATION, CONTEXT_SPECIFIC, PRIVATE
-	}
+    enum Class {
+        UNIVERSAL, APPLICATION, CONTEXT_SPECIFIC, PRIVATE
+    }
 
-	boolean isConstructed();
+    boolean isConstructed();
 
-	byte[] getTagBytes();
+    byte[] getTagBytes();
 
-	String getName();
+    String getName();
 
-	String getDescription();
+    String getDescription();
 
-	TagTypeEnum getType();
+    TagTypeEnum getType();
 
-	TagValueTypeEnum getTagValueType();
+    TagValueTypeEnum getTagValueType();
 
-	Class getTagClass();
+    Class getTagClass();
 
-	int getNumTagBytes();
+    int getNumTagBytes();
 
 }
