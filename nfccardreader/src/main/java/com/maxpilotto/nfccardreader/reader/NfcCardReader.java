@@ -27,7 +27,6 @@ public class NfcCardReader {
     public static final int REQUEST_CODE = 94125;
 
     public enum Error {
-        NFC_NOT_SUPPORTED,
         UNKNOWN_EMV_CARD,
         READ_ERROR
     }
@@ -57,10 +56,6 @@ public class NfcCardReader {
                 intent,
                 0
         );
-
-        if (nfcAdapter == null) {
-            cardListener.onReaderError(Error.NFC_NOT_SUPPORTED);
-        }
     }
 
     /**
@@ -115,6 +110,10 @@ public class NfcCardReader {
      * @param intent Intent obtained from Activity's onNewIntent method
      */
     public void parse(Intent intent) {
-        new NfcCardParser(intent, cardListener);
+        boolean hasExtra = intent.hasExtra(NfcAdapter.EXTRA_TAG);
+
+        if (isAdapterAvailable() && isAdapterEnabled() && hasExtra){
+            new NfcCardParser(intent, cardListener);
+        }
     }
 }
