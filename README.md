@@ -2,14 +2,9 @@
 Wrapper for pro100svitlo's nfc card reading library 
 
 # Getting started
-* Download the lastest release, you can find it [here](https://github.com/maxpilotto/nfc-card-reader/releases) 
-* Open Android Studio and go to File > New > New module > Import .JAR/.AAR Package (Select the file downloaded previously)
-* Finally, add this to your module's build.gradle
 ```gradle 
 dependencies {
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
-    
-    compile project(':nfc-card-reader')   //Add This line
+    implementation 'com.maxpilotto:nfccardreader:2.0'
 ```
 
 
