@@ -5,6 +5,7 @@ Wrapper for pro100svitlo's nfc card reading library
 ```gradle 
 dependencies {
     implementation 'com.maxpilotto:nfccardreader:2.0'
+}
 ```
 
 
