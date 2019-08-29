@@ -1,28 +1,5 @@
 apply plugin: 'com.android.library'
 
-ext {
-    bintrayRepo = 'nfc-card-reader'
-    bintrayName = 'nfc-card-reader'
-
-    publishedGroupId = 'com.maxpilotto'
-    libraryName = 'nfc-card-reader'
-    libraryDescription = 'Wrapper for pro100svitlo\'s nfc card reading library'
-    artifact = 'nfccardreader'
-
-    siteUrl = 'https://github.com/maxpilotto/nfc-card-reader'
-    gitUrl = 'https://github.com/maxpilotto/nfc-card-reader.git'
-
-    libraryVersion = '2.0'
-
-    developerId = 'maxpilotto'
-    developerName = 'Max Pilotto'
-    developerEmail = 'maxpil99@outlook.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 android {
     compileSdkVersion 28
 
@@ -46,10 +23,6 @@ android {
 
 }
 
-tasks.withType(Javadoc).all {
-    enabled = false
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -60,6 +33,3 @@ dependencies {
     implementation files('libs/bit-lib4j-1.4.12')
     implementation files('libs/slf4j-api-1.7.25')
 }
-
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

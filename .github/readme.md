@@ -1,13 +1,20 @@
-# nfc-card-reader
+# Nfc Card Reader
 Wrapper for pro100svitlo's nfc card reading library 
 
 # Getting started
-```gradle 
-dependencies {
-    implementation 'com.maxpilotto:nfccardreader:2.0'
+In your project's `build.gradle`
+```gradle
+repositories {
+	maven { url "https://jitpack.io" }
 }
 ```
 
+In your modules's `build.gradle`
+```gradle 
+dependencies {
+    implementation 'com.github.maxpilotto:nfc-card-reader:2.0'
+}
+```
 
 # Usage
 The easiest way to use it is to extend the NfcReaderActivity in the activity that will handle the scanned card
