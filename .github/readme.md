@@ -12,7 +12,7 @@ repositories {
 In your modules's `build.gradle`
 ```gradle 
 dependencies {
-    implementation 'com.github.maxpilotto:nfc-card-reader:2.0'
+    implementation 'com.github.maxpilotto:nfc-card-reader:2.1'
 }
 ```
 
